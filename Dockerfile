@@ -1,11 +1,11 @@
-FROM python:3.10
+FROM python:3
 
-WORKDIR /app
+WORKDIR /django
 
-COPY requirements.txt /app/
+COPY requirements.txt /django/
 RUN pip install -r requirements.txt
 
-COPY . /app/
+COPY . /django/
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
